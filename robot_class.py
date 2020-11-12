@@ -80,7 +80,6 @@ class robot:
         measurements = []
         
         ## TODO: iterate through all of the landmarks in a world
-        ## TODO: iterate through all of the landmarks in a world
         ## TODO: For each landmark
         ## 1. compute dx and dy, the distances between the robot and the landmark
         ## 2. account for measurement noise by *adding* a noise component to dx and dy
