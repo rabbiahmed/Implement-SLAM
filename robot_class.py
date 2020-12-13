@@ -93,10 +93,13 @@ class robot:
         ## 3. If either of the distances, dx or dy, fall outside of the internal var, measurement_range
         ##    then we cannot record them; if they do fall in the range, then add them to the measurements list
         ##    as list.append([index, dx, dy]), this format is important for data creation done later
-        if dx > self.measurement_range or dy > self.measurement_range:
-            return False
-        else:
-            measurements.append([l, dx, dy])
+            if dx > self.measurement_range or dy > self.measurement_range:
+                # if the the distance dx or dy of the landmark falls outside of measurement_range,just put 0 for it 
+                dx = 0
+                dy = 0
+                measurements.append([l, dx, dy])
+            else:
+                measurements.append([l, dx, dy])
         
         ## TODO: return the final, complete list of measurements
             
