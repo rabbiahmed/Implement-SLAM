@@ -97,7 +97,7 @@ class robot:
                 # if the the distance dx or dy of the landmark falls outside of measurement_range,just put 0 for it 
                 dx = 0
                 dy = 0
-                measurements.append([l, dx, dy])
+                #measurements.append([l, dx, dy])
             else:
                 measurements.append([l, dx, dy])
         
